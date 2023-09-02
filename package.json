@@ -5,14 +5,22 @@
   "main": "metacritic-bk.js",
   "type": "module",
   "scripts": {
-    "build": "bookmarklet src/index.js dist/bookmarklet.js",
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+    "build": "cross-env NODE_ENV=build bookmarklet src/index.js dist/bookmarklet.js",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/jest": "^29.5.4",
     "bookmarklet": "^3.0.0",
-    "jest": "^29.6.4"
+    "cross-env": "^7.0.3",
+    "jest": "^29.6.4",
+    "jest-dom": "^4.0.0",
+    "jest-environment-jsdom": "^29.6.4",
+    "jsdom": "^22.1.0"
+  },
+  "dependencies": {
+    "ts-node": "^10.9.1"
   }
 }

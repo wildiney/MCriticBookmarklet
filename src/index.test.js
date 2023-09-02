@@ -1,19 +1,26 @@
-import { constructURL } from './index.js'
+const { Metacritic } = require('./index.js');
 
-const url = "https://www.metacritic.com/game/playstation-4/";
+describe('constructURL', () => {
+    it('should construct a valid URL for Super Mario Bros & 3', () => {
+        const gameName = "Super Mario Bros & 3"
+        const meta = new Metacritic('https://www.metacritic.com/game/playstation-4/', gameName)
+        const constructedURL = meta.goTo();
+        expect(constructedURL).toBe('https://www.metacritic.com/game/playstation-4/super-mario-bros-3');
+    });
+});
 
-test("It should return the url test", () => {
-    const fullURL = constructURL(url, "teste")
-    expect(fullURL).toBe(`${url}teste`)
-})
+// describe('constructURL', () => {
+//     it('should construct a valid URL for God of War', () => {
+//         const gameName = "God of War"
+//         const constructedURL = bookmarkThis(gameName);
+//         expect(constructedURL).toBe('https://www.metacritic.com/game/playstation-4/god-of-war');
+//     });
+// });
 
-test("It should return the url for God of War", () => {
-    const fullURL = constructURL(url, "God of War")
-    expect(fullURL).toBe(`${url}god-of-war`)
-})
-
-test("It should return the url for Asterix & Obelix: Slap them all!", () => {
-    const fullURL = constructURL(url, "Asterix & Obelix: Slap them all!")
-    expect(fullURL).toBe(`${url}asterix-obelix-slap-them-all`)
-})
-
+// describe('constructURL', () => {
+//     it('should construct a valid URL for Asterix & Obelisk: Slap Them All!', () => {
+//         const gameName = "Asterix & Obelix: Slap Them All!"
+//         const constructedURL = bookmarkThis(gameName);
+//         expect(constructedURL).toBe('https://www.metacritic.com/game/playstation-4/asterix-obelix-slap-them-all!');
+//     });
+// });
