@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ES2021",
+    "module": "ESNext",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "skipLibCheck": true,
+    "removeComments": true,
+    "moduleResolution": "node"
+  },
+  "exclude": [
+    "bookmarklet",
+    "coverage",
+    "dist"
+  ]
+}
