@@ -8,7 +8,11 @@
     "noImplicitAny": true,
     "skipLibCheck": true,
     "removeComments": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "typeRoots": [
+      "./node_modules/@types",
+      "./types"
+    ]
   },
   "exclude": [
     "bookmarklet",
