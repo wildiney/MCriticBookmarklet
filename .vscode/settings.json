@@ -1,7 +1,7 @@
 {
     "editor.codeActionsOnSave": {
-        "source.fixAll.esling": true,
-        "source.organizeImports": true
+        "source.fixAll.esling": "explicit",
+        "source.organizeImports": "explicit"
     },
     "typescript.format.insertSpaceBeforeFunctionParenthesis": true,
     "typescript.format.insertSpaceAfterConstructor": true
